@@ -14,9 +14,9 @@
 
 // JavaScript 
 
-num = 10; // don't use this 
-var num2 = 20; // don't use this also 
-const num3 = 30; // use this preferrably, for constants 
+// num = 10; // don't use this 
+// var num2 = 20; // don't use this also 
+// const num3 = 30; // use this preferrably, for constants 
 
 // let num4 = 40; // also this for 'variables'
 
@@ -42,27 +42,30 @@ const num3 = 30; // use this preferrably, for constants
 
 // Arrays and objects in JS 
 
-// arrrays 
-let myArray = [10, 20.50, "abc", false, [25, "xyz"]];
-console.log(myArray);
+// // arrrays 
+// let myArray = [10, 20.50, "abc", false, [25, "xyz"]];
+// console.log(myArray);
+// console.log(myArray[0]);
+// console.log("---");
 
-// objects 
-let employee = {
-    id: 101,
-    name: "Sonu Singh",
-    salary: 90000.50,
-    isIndian: true,
-    address: {
-        street: "Abids road",
-        city: 'Hyderabad',
-        pin: 500001
-    },
-    phones: [9876543210, 7894561230],
-    email: "sonu.singh@abc.com"
-};
-console.log(employee);
-console.log("---");
-console.log(employee.name);
+// // objects 
+// let employee = {
+//     id: 101,
+//     name: "Sonu Singh",
+//     salary: 90000.50,
+//     isIndian: true,
+//     address: {
+//         street: "Abids road",
+//         city: 'Hyderabad',
+//         pin: 500001
+//     },
+//     phones: [9876543210, 7894561230],
+//     email: "sonu.singh@abc.com"
+// };
+
+// console.log(employee);
+// console.log("---");
+// console.log(employee.name);
 
 
 
