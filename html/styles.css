@@ -1,0 +1,11 @@
+.db-style  {
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+}
+
+.db-style-classic  {
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+}
