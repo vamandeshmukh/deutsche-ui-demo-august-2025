@@ -132,6 +132,14 @@ getData()
 .catch((error) => {console.log(error.message);});
 
 
+const useData = async () => {
+    const data = await getData();
+    console.log(data.message);
+};
+useData();
+
+
+
 // new Promise();
 // new Promise(() => {});
 // new Promise((resolve, reject) => {});
