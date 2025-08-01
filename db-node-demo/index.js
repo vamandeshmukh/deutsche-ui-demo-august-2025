@@ -1,3 +1,6 @@
+// on CMD, run 
+// npm start 
+
 console.log("DB Node Project starting...");
 
 const http = require("http");

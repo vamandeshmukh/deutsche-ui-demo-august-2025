@@ -54,46 +54,84 @@
 
 
 
-// =========================
-// Solution 3 Promise with async / await 
-// =========================
+// // =========================
+// // Solution 3 Promise with async / await 
+// // =========================
+
+// // function that returns a promise == sends data 
+// const getData = (arg) => {
+//     console.log("getData");
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve({message: "data is available." });
+//         }, 1000);
+//     });
+// };
+
+// // function call that consumes the promise with async / await == gets data 
+
+// const useData = async () => {
+//     const data = await getData();
+//     console.log(data.message);
+// };
+
+// useData();
+
+
+// // fetch().then().then().catch();
+// // fetch((apiUrl) => {}).then(() => {}).then(() => {}).catch(() => {});
+
+// // const apiUrl = "https://jsonplaceholder.typicode.com/users/1";
+
+// // fetch(apiUrl)
+// // .then((response) => { return response.json();})
+// // .then((data) => {
+// //     console.log(data.username);
+// //     console.log(data.nonExistingProperty);
+// // });
+
+// // // // shortcut syntax 
+// // fetch(apiUrl)
+// // .then(resp => resp.json())
+// // .then(data => console.log(data.username));
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // =========================
+// // =========================
 
 // function that returns a promise == sends data 
 const getData = (arg) => {
     console.log("getData");
-    return new Promise((resolve) => {
+    const isDataAvailable = false; // true;
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
+            if (isDataAvailable)
             resolve({message: "data is available." });
+        else 
+            reject({message: "data is not available."});
         }, 1000);
     });
 };
 
-// function call that consumes the promise with async / await == gets data 
-
-const useData = async () => {
-    const data = await getData();
+// // function call that consumes the promise == gets data 
+getData()
+.then((data) => {
     console.log(data.message);
-};
-
-useData();
-
-
-// fetch().then().then().catch();
-// fetch((apiUrl) => {}).then(() => {}).then(() => {}).catch(() => {});
-
-// const apiUrl = "https://jsonplaceholder.typicode.com/users/1";
-
-// fetch(apiUrl)
-// .then((response) => { return response.json();})
-// .then((data) => {
-//     console.log(data.username);
-//     console.log(data.nonExistingProperty);
-// });
-
-// // // shortcut syntax 
-// fetch(apiUrl)
-// .then(resp => resp.json())
-// .then(data => console.log(data.username));
+})
+.catch((error) => {console.log(error.message);});
 
 
-
+// new Promise();
+// new Promise(() => {});
+// new Promise((resolve, reject) => {});
